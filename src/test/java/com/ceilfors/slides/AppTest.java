@@ -1,38 +1,21 @@
-// package com.ceilfors.slides;
+package com.ceilfors.slides;
 
-// import junit.framework.Test;
-// import junit.framework.TestCase;
-// import junit.framework.TestSuite;
+import com.google.common.base.Joiner;
 
-// /**
-//  * Unit test for simple App.
-//  */
-// public class AppTest 
-//     extends TestCase
-// {
-//     /**
-//      * Create the test case
-//      *
-//      * @param testName name of the test case
-//      */
-//     public AppTest( String testName )
-//     {
-//         super( testName );
-//     }
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-//     /**
-//      * @return the suite of tests being tested
-//      */
-//     public static Test suite()
-//     {
-//         return new TestSuite( AppTest.class );
-//     }
 
-//     /**
-//      * Rigourous Test :-)
-//      */
-//     public void testApp()
-//     {
-//         assertTrue( true );
-//     }
-// }
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
+
+    /**
+     * Rigourous Test :-)
+     */
+    @Test
+    public void testJoin() {
+        assertEquals("Hello world !", Joiner.on(" ").skipNulls().join("Hello", null, "world", null, "!"));
+    }
+}
